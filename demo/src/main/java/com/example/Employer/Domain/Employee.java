@@ -1,12 +1,13 @@
 package com.example.Employer.Domain;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Employee {
     private Integer id;
- private String empName;
+    private String empName;
     private int empAge;
     private Long empSalary;
 

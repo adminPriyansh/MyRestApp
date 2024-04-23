@@ -10,6 +10,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/rest/employer/")
 public class EmployeeController {
     static List<Employee> employeeRecords = new ArrayList<>();
     static{
@@ -57,6 +58,7 @@ public class EmployeeController {
 
     @PostMapping(path = "/updateEmployee")
     public ResponseEntity<List<Employee>> updateEmployees(@RequestBody Employee employee) {
+        System.out.println("in");
         List<Employee> addonItems = this.employeeRecords;
 
         for (Employee addOn : addonItems) {
