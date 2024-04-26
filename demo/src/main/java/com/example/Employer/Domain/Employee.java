@@ -1,13 +1,20 @@
 package com.example.Employer.Domain;
 
+import jakarta.persistence.*;
+import org.springframework.boot.autoconfigure.web.WebProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.stereotype.Component;
 
-@Component
+@Entity
+@Table(name = "Employee")
 public class Employee {
+
+    @Id
     private Integer id;
     private String empName;
+
     private int empAge;
     private Long empSalary;
 
